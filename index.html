@@ -35,9 +35,11 @@
       </form>
     </section>
     <section id = "search" class = "container">
-      <b>Search by First Name:</b> <input type="text" class="form-search" ng-model="search.firstName">
-      <b>Search by Last Name:</b> <input type="text" class="form-search" ng-model="search.lastName">
-      <b>Search by Shoutout:</b>  <input type="text" class="form-search" ng-model="search.shoutout">
+      <b>Search by</b><br>
+      <b>Any</b> <input ng-model="search" type="text" class="form-search" nameautofocus>
+      <b>First Name:</b> <input type="text" class="form-search" ng-model="search.firstName">
+      <b>Last Name:</b> <input type="text" class="form-search" ng-model="search.lastName">
+      <b>Shoutout:</b>  <input type="text" class="form-search" ng-model="search.shoutout">
     </section>
     <section class="container">
       <h3>Class List</h3>
