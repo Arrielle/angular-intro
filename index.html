@@ -34,8 +34,9 @@
         <button class="btn-primary" ng-click="phirePhiter.createPerson()" type="submit" name="button">Submit</button>
       </form>
     </section>
-    <section id = "search" class = "container col-md-12">
+    <section id = "search" class = "container">
       <h3>Search by</h3>
+      <form class="col-md-12">
       <div class="form-group col-md-3">
       <label for="searchAny">Any</label><br>
       <input ng-model="search" name="searchAny" type="text" class="form-search" nameautofocus>
@@ -52,6 +53,7 @@
       <label for="searchShoutout">Shoutout:</label><br>
         <input type="text" name="searchShoutout" class="form-search" ng-model="search.shoutout">
     </div>
+  </form>
     </section>
     <section class="container">
       <h3>Class List</h3>
