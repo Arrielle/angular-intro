@@ -1,0 +1,38 @@
+body{
+  margin-top: 40px;
+}
+#search {
+  /*background-color: pink;*/
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: lightgrey;
+  padding: 20px
+}
+
+.form-search{
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+    border: none;
+    height: 45px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+    border: none;
+
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+    border: none;
+
+}

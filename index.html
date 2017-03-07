@@ -6,6 +6,7 @@
   <script type="text/javascript" src="vendors/angular.min.js"></script>
   <script type="text/javascript" src="scripts/client.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 <body>
   <main ng-app="PhirePhiterApp" ng-controller="PhirePhiterController as phirePhiter">
@@ -30,21 +31,21 @@
           <label for="shoutout">Shoutout</label>
           <input type="text" name="shoutout" class="form-control" ng-model="phirePhiter.newPerson.shoutout" placeholder="Shoutout"/>
         </div>
-        <button ng-click="phirePhiter.createPerson()" type="submit" name="button">Submit</button>
+        <button class="btn-primary" ng-click="phirePhiter.createPerson()" type="submit" name="button">Submit</button>
       </form>
     </section>
-    <section class = "container">
-    <label for="search">Search</label>
-    <input ng-model="query" type="text"
-            name: "search" placeholder="Filter by" nameautofocus>
-          </section>
+    <section id = "search" class = "container">
+      <b>Search by First Name:</b> <input type="text" class="form-search" ng-model="search.firstName">
+      <b>Search by Last Name:</b> <input type="text" class="form-search" ng-model="search.lastName">
+      <b>Search by Shoutout:</b>  <input type="text" class="form-search" ng-model="search.shoutout">
+    </section>
     <section class="container">
       <h3>Class List</h3>
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="person in phirePhiter.people | filter:query | orderBy: 'name'"> <!-- What needs to be repeated? -->
+        <li class="list-group-item" ng-repeat="person in phirePhiter.people | filter:search "> <!-- What needs to be repeated? -->
           <!-- TODO: Create a list item for everyone in the class -->
           <a ng-href="http://www.github.com/{{person.git_username}}">{{person.firstName}} {{person.lastName}}</a>
-           - {{person.shoutout}}
+          - {{person.shoutout}}
         </li>
       </ul>
     </section>
