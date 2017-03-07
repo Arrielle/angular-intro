@@ -34,12 +34,24 @@
         <button class="btn-primary" ng-click="phirePhiter.createPerson()" type="submit" name="button">Submit</button>
       </form>
     </section>
-    <section id = "search" class = "container">
-      <b>Search by</b><br>
-      <b>Any</b> <input ng-model="search" type="text" class="form-search" nameautofocus>
-      <b>First Name:</b> <input type="text" class="form-search" ng-model="search.firstName">
-      <b>Last Name:</b> <input type="text" class="form-search" ng-model="search.lastName">
-      <b>Shoutout:</b>  <input type="text" class="form-search" ng-model="search.shoutout">
+    <section id = "search" class = "container col-md-12">
+      <h3>Search by</h3>
+      <div class="form-group col-md-3">
+      <label for="searchAny">Any</label><br>
+      <input ng-model="search" name="searchAny" type="text" class="form-search" nameautofocus>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="searchFirst">First Name:</label><br>
+        <input type="text" name="searchFirst"class="form-search" ng-model="search.firstName">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="searchLast">Last Name:</label><br>
+       <input type="text" name="searchLast" class="form-search" ng-model="search.lastName">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="searchShoutout">Shoutout:</label><br>
+        <input type="text" name="searchShoutout" class="form-search" ng-model="search.shoutout">
+    </div>
     </section>
     <section class="container">
       <h3>Class List</h3>
