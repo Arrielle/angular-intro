@@ -14,20 +14,19 @@
       <h1>PhirePhiter's angular list</h1>
       <h3>Add a new person</h3>
       <form class="col-md-12">
-
-        <div class="form-group col-md-6">
+        <div class="form-group col-xs-6">
           <label for="firstName">First Name</label>
           <input type="text" name="firstName" class="form-control" ng-model="phirePhiter.newPerson.firstName" placeholder="First Name"/>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-xs-6">
           <label for="firstName">Last Name</label>
           <input type="text" name="lastName" class="form-control" ng-model="phirePhiter.newPerson.lastName" placeholder="Last Name"/>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-xs-6">
           <label for="getUsername">Git Username</label>
           <input type="text" name="gitUsername" class="form-control" ng-model="phirePhiter.newPerson.git_username" placeholder="Github Username"/>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-xs-6">
           <label for="shoutout">Shoutout</label>
           <input type="text" name="shoutout" class="form-control" ng-model="phirePhiter.newPerson.shoutout" placeholder="Shoutout"/>
         </div>
@@ -37,30 +36,30 @@
     <section id = "search" class = "container">
       <h3>Search by</h3>
       <form class="col-md-12">
-      <div class="form-group col-md-3">
-      <label for="searchAny">Any</label><br>
-      <input ng-model="search" name="searchAny" type="text" class="form-search" nameautofocus>
+      <div class="form-group col-xs-6 col-md-3">
+      <label for="searchAny">Any:</label><br>
+      <input type="text" name="searchAny" class="form-control" ng-model="phirePhiter.search.$">
     </div>
-    <div class="form-group col-md-3">
+    <div class="form-group col-xs-6 col-md-3">
       <label for="searchFirst">First Name:</label><br>
-        <input type="text" name="searchFirst"class="form-search" ng-model="search.firstName">
+        <input type="text" name="searchFirst"class="form-control" ng-model="phirePhiter.search.firstName">
     </div>
-    <div class="form-group col-md-3">
+    <div class="form-group col-xs-6 col-md-3">
       <label for="searchLast">Last Name:</label><br>
-       <input type="text" name="searchLast" class="form-search" ng-model="search.lastName">
+       <input type="text" name="searchLast" class="form-control" ng-model="phirePhiter.search.lastName">
     </div>
-    <div class="form-group col-md-3">
+    <div class="form-group col-xs-6 col-md-3">
       <label for="searchShoutout">Shoutout:</label><br>
-        <input type="text" name="searchShoutout" class="form-search" ng-model="search.shoutout">
+        <input type="text" name="searchShoutout" class="form-control" ng-model="phirePhiter.search.shoutout">
     </div>
   </form>
     </section>
     <section class="container">
       <h3>Class List</h3>
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="person in phirePhiter.people | filter:search "> <!-- What needs to be repeated? -->
+        <li class="list-group-item" ng-repeat="person in phirePhiter.people | filter:phirePhiter.search "> <!-- What needs to be repeated? -->
           <!-- TODO: Create a list item for everyone in the class -->
-          <a ng-href="http://www.github.com/{{person.git_username}}">{{person.firstName}} {{person.lastName}}</a>
+          <a ng-href="http://www.github.com/{{person.git_username}}" target="_blank">{{person.firstName}} {{person.lastName}}</a>
           - {{person.shoutout}}
         </li>
       </ul>

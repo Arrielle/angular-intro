@@ -19,6 +19,7 @@ phirePhiterApp.controller('PhirePhiterController', function(){
   self.createPerson = function(){
     console.log(self.newPerson);
     self.people.push(angular.copy(self.newPerson));
+    self.newPerson = {};
   };
 
 });
